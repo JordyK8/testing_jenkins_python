@@ -12,7 +12,10 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
+                echo "in sh"
                 cd app
+                echo "in app folder"
+                ls
                 pip install -r requirements.txt
                 echo "doing build stuff.."
                 '''
